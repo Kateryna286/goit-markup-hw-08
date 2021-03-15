@@ -57,7 +57,11 @@
   }
 
   &__thumb {
-    padding: 30px 122px 24px;
+    // padding: 30px 22px 24px;
+    padding-top: 30px;
+    padding-bottom: 24px;
+    padding-left: auto;
+    padding-right: auto;
   }
 
   &__title {
@@ -84,6 +88,12 @@
     letter-spacing: 0.03em;
 
     text-align: center;
+  }
+
+  @media screen and (min-width: $mobile){
+    &__thumb {
+      padding: 30px 122px 24px;
+    }
   }
 
   @media screen and (min-width: $tablet){

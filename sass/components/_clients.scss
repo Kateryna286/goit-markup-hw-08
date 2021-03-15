@@ -1,24 +1,68 @@
 /* Постоянные клиенты */
 
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   &__title {
-    @extend %section-titles;
+    @include section-titles();
+
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.178;
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
   }
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
+  &__item  {
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc(100% / 2 - 30px);
   }
 
   &__logo {
     fill: currentColor;
+  }
+
+  @media screen and (min-width: $tablet){
+    &__item  {
+      flex-basis: calc(100% / 3 - 30px);
+    }
+  }
+
+  @media screen and (min-width: $desktop){
+
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__title {
+      @include section-titles();
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: nowrap;
+      margin-left: 0;
+      margin-top: 0;
+    }
+
+    &__item {
+      margin-left: 0;
+      margin-top: 0;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &__logo {
+      fill: currentColor;
+    }
   }
 }
 
@@ -27,7 +71,7 @@
   justify-content: center;
   align-items: center;
 
-  width: 170px;
+  width: 210px;
   height: 90px;
 
   @include border($grey-svg-color);
@@ -43,5 +87,34 @@
     border-color: $accent-color;
     color: $accent-color;
     outline: none;
+  }
+
+  @media screen and (min-width: $tablet){
+    width: 226px;
+  }
+
+  @media screen and (min-width: $desktop){
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 170px;
+    height: 90px;
+
+    @include border($grey-svg-color);
+    border-radius: 4px;
+
+    color: $grey-svg-color;
+
+    @include transition(color);
+    @include transition(border-color);
+
+    &:hover,
+    &:focus {
+      border-color: $accent-color;
+      color: $accent-color;
+      outline: none;
+    }
   }
 }
