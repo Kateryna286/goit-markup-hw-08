@@ -95,7 +95,7 @@ body {
   background-color: #f5f4fa;
 }
 
-.issues__title, .team__title, .clients__title {
+.clients__title {
   margin-bottom: 50px;
   color: #212121;
   font-weight: 700;
@@ -105,7 +105,7 @@ body {
   text-align: center;
 }
 
-.issues__text, .footer__titles {
+.footer__titles {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.142;
@@ -368,6 +368,7 @@ body {
 /* Особенности */
 .features {
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .features__list {
@@ -440,6 +441,7 @@ body {
 @media screen and (min-width: 1600px) {
   .features {
     padding-top: 94px;
+    padding-bottom: 0;
   }
   .features__item {
     -ms-flex-preferred-size: calc(100% / 4 - 30px);
@@ -453,35 +455,53 @@ body {
 
 /* Задачи */
 .issues {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  display: none;
 }
 
-.issues__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
-}
-
-.issues__item {
-  -ms-flex-preferred-size: calc(100% / 3 - 30px);
-      flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
-}
-
-.issues__text {
-  position: absolute;
-  top: 251px;
-  white-space: nowrap;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  left: 50%;
-  color: #fff;
+@media screen and (min-width: 1600px) {
+  .issues {
+    display: block;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .issues__title {
+    margin-bottom: 50px;
+    color: #212121;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+  .issues__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+  .issues__item {
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  .issues__text {
+    position: absolute;
+    top: 251px;
+    white-space: nowrap;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    left: 50%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.142;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
 }
 
 .issues__thumb {
@@ -503,33 +523,73 @@ body {
 
 /* Команда */
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.team-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+.team__title {
+  margin-bottom: 50px;
+  color: #212121;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  line-height: 1.178;
+}
+
+@media screen and (min-width: 768px) {
+  .team {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .team__title {
+    margin-bottom: 50px;
+    color: #212121;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.178;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .team__title {
+    margin-bottom: 50px;
+    color: #212121;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
 }
 
 .team-card__item {
-  -ms-flex-preferred-size: calc(100% / 4 - 30px);
-      flex-basis: calc(100% / 4 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
+  width: 100%;
+  margin-bottom: 40px;
   background-color: #fff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
+.team-card__item:last-child {
+  margin-bottom: 0;
+}
+
 .team-card__thumb {
-  padding: 30px 32px;
+  padding: 30px 122px 24px;
 }
 
 .team-card__title {
@@ -537,7 +597,7 @@ body {
   color: #212121;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.18;
+  line-height: 1.187;
   letter-spacing: 0.03em;
   text-align: center;
 }
@@ -547,9 +607,72 @@ body {
   color: #757575;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.18;
+  line-height: 1.187;
   letter-spacing: 0.03em;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .team-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+  .team-card__item {
+    width: 354px;
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  .team-card__thumb {
+    padding: 30px 74px 24px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .team-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .team-card__item {
+    width: 270px;
+    -ms-flex-preferred-size: calc(100% / 4 - 30px);
+        flex-basis: calc(100% / 4 - 30px);
+    background-color: #fff;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+  .team-card__thumb {
+    padding: 30px 32px;
+  }
+  .team-card__title {
+    margin-bottom: 10px;
+    color: #212121;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+  .team-card__text {
+    margin-bottom: 16px;
+    color: #757575;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
 }
 
 .social-networks {
