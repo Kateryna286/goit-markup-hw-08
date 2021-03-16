@@ -14,7 +14,7 @@
 @mixin text-section() {
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.714;
   letter-spacing: 0.03em;
 }
 
@@ -44,4 +44,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@mixin logo() {
+  font-family: $font-family-logo;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
 }
