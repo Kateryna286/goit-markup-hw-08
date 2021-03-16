@@ -84,3 +84,26 @@
     color: $accent-color;
   }
 }
+
+// .menu-button {
+//   display: inline-flex;
+//   margin: 0;
+//   padding: 0;
+//   border: none;
+//   background-color: transparent;
+//   cursor: pointer;
+
+//   &.is-open &__icon--cross {
+//     display: block;
+//   }
+
+//   &.is-open &__icon--menu {
+//     display: none;
+//   }
+
+//   &__icon--cross {
+//     display: none;
+//   }
+// }
+
+

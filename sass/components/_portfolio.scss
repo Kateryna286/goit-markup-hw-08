@@ -1,20 +1,63 @@
 /* Портфолио */
 
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   &__container {
-    margin-bottom: 50px;
+    margin-bottom: 40px - 15px;
+  }
+
+  @media screen and (min-width: $mobile) {
+    &__container {
+      width: $mobile;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    &__container {
+      width: $tablet;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__container {
+      width: 1200px;
+      margin-bottom: 50px;
+    }
   }
 }
 
 .button-set {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: start;
 
-  &__item:not(:last-child) {
+  &__item {
     margin-right: 8px;
+  }
+
+  @media screen and (max-width: $tablet - 1px) {
+    
+    &__item {
+      margin-bottom: 15px;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: center;
+
+    &__item:not(:last-child) {
+      margin-right: 8px;
+    }
   }
 }
 
@@ -48,17 +91,12 @@
 /* Портфолио. Работы */
 
 .card-set {
-  display: flex;
-  flex-wrap: wrap;
-
-  margin-left: -30px;
-  margin-top: -30px;
-
   &__item {
-    flex-basis: calc(100% / 3 - 30px);
+    // width: 450px;
+    width: 100%;
 
-    margin-left: 30px;
-    margin-top: 30px;
+    margin-left: auto;
+    margin-top: auto;
 
     background-color: $main-background-color;
   }
@@ -66,6 +104,33 @@
   &__thumb {
     position: relative;
     overflow: hidden;
+  }
+
+  @media screen and (max-width: $tablet - 1px) {
+    &__item {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: -30px;
+    margin-top: -30px;
+
+    &__item {
+      flex-basis: calc(100% / 2 - 30px);
+
+      margin-left: 30px;
+      margin-top: 30px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    &__item {
+      flex-basis: calc(100% / 3 - 30px);          
+    }  
   }
 }
 
@@ -94,7 +159,7 @@
   position: absolute;
   transform: translateY(100%);
 
-  top: 0;
+  top: 1px;
   left: 0;
 
   width: 100%;
@@ -105,9 +170,7 @@
   @include transition(transform);
 
   &__text {
-    @extend %position-center;
-
-    width: 322px;
+    @include position-center();
 
     color: $white-additional-color;
 
@@ -116,13 +179,28 @@
     line-height: 1.55;
     letter-spacing: 0.03em;
   }
+
+  @media screen and (min-width: $mobile) {
+    &__text {
+      width: 402px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    &__text {
+      width: 306px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    &__text {
+      width: 322px;
+    }
+  }
 }
 
 .card-content {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 20px 24px;
 
   border-bottom: 1px solid $portfolio-border-color;
   border-left: 1px solid $portfolio-border-color;

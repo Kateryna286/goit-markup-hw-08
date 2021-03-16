@@ -145,7 +145,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.modal, .card-overlay__text {
+.modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1237,25 +1237,79 @@ body {
 
 /* Портфолио */
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .portfolio__container {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 480px) {
+  .portfolio__container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__container {
+    width: 768px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .portfolio__container {
+    width: 1200px;
+    margin-bottom: 50px;
+  }
 }
 
 .button-set {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
-.button-set__item:not(:last-child) {
+.button-set__item {
   margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .button-set__item {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .button-set {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .button-set {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .button-set__item:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 
 .button-set__btn {
@@ -1287,27 +1341,47 @@ body {
 }
 
 /* Портфолио. Работы */
-.card-set {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
-}
-
 .card-set__item {
-  -ms-flex-preferred-size: calc(100% / 3 - 30px);
-      flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
+  width: 100%;
+  margin-left: auto;
+  margin-top: auto;
   background-color: #fff;
 }
 
 .card-set__thumb {
   position: relative;
   overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  .card-set__item {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card-set {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+  .card-set__item {
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .card-set__item {
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 .card-set__link {
@@ -1339,7 +1413,7 @@ body {
   position: absolute;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  top: 0;
+  top: 1px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -1351,7 +1425,11 @@ body {
 }
 
 .card-overlay__text {
-  width: 322px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #fff;
   font-weight: 400;
   font-size: 18px;
@@ -1359,11 +1437,26 @@ body {
   letter-spacing: 0.03em;
 }
 
+@media screen and (min-width: 480px) {
+  .card-overlay__text {
+    width: 402px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card-overlay__text {
+    width: 306px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .card-overlay__text {
+    width: 322px;
+  }
+}
+
 .card-content {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 20px 24px;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
