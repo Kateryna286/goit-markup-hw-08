@@ -18,7 +18,7 @@
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
   }
@@ -327,7 +327,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .hero {
     max-width: 1600px;
     height: 600px;
@@ -420,7 +420,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .features {
     padding-top: 94px;
     padding-bottom: 0;
@@ -440,7 +440,7 @@ body {
   display: none;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .issues {
     display: block;
     padding-top: 94px;
@@ -541,7 +541,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .team {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -626,7 +626,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .team-card {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -753,7 +753,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .clients {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -821,7 +821,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .clients__unit {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -880,7 +880,7 @@ body {
   color: #fff;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1599px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -895,7 +895,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .footer__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -964,7 +964,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .address {
     margin-bottom: 0;
   }
@@ -999,7 +999,7 @@ body {
   color: #fff;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .footer-sn {
     margin-bottom: 0;
     margin-left: 70px;
@@ -1052,7 +1052,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .footer-subscribe {
     margin-left: 93px;
   }
@@ -1082,7 +1082,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .footer-subscribe__set {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1363,7 +1363,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .portfolio {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -1403,7 +1403,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .button-set {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1482,7 +1482,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .card-set__item {
     -ms-flex-preferred-size: calc(100% / 3 - 30px);
         flex-basis: calc(100% / 3 - 30px);
@@ -1554,7 +1554,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .card-overlay__text {
     width: 322px;
   }
