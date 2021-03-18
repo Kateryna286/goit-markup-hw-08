@@ -92,6 +92,7 @@
 
 .card-set {
   &__item {
+    
     // width: 450px;
     width: 100%;
 
@@ -102,6 +103,8 @@
   }
 
   &__thumb {
+    display: flex;
+  flex-direction: column;
     position: relative;
     overflow: hidden;
   }
@@ -121,6 +124,7 @@
 
     &__item {
       flex-basis: calc(100% / 2 - 30px);
+      
 
       margin-left: 30px;
       margin-top: 30px;
@@ -135,7 +139,9 @@
 }
 
 .card-set__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  
   width: 100%;
   height: 100%;
 
@@ -170,6 +176,8 @@
   @include transition(transform);
 
   &__text {
+    width: 100%;
+    padding: 40px 5px;
     @include position-center();
 
     color: $white-additional-color;
@@ -178,28 +186,26 @@
     font-size: 18px;
     line-height: 1.55;
     letter-spacing: 0.03em;
-  }
 
-  @media screen and (min-width: $mobile) {
-    &__text {
-      width: 402px;
+    @media screen and (min-width: $mobile) {
+      padding: 77px 24px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      padding: 49px 24px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 63px 24px;
     }
   }
 
-  @media screen and (min-width: $tablet) {
-    &__text {
-      width: 306px;
-    }
-  }
-
-  @media screen and (min-width: $desktop) {
-    &__text {
-      width: 322px;
-    }
-  }
+  
 }
 
 .card-content {
+  flex-grow: 1;
+  
   padding: 20px 24px;
 
   border-bottom: 1px solid $portfolio-border-color;
@@ -218,6 +224,7 @@
   }
 
   &__text {
+    
     color: $text-color;
 
     font-weight: 400;

@@ -54,7 +54,13 @@ textarea:active {
 body {
   margin: 0;
   font-family: $font-family-body;
+  
+  &.modal-open {
+    overflow: hidden;
+  }
 }
+
+
 
 /* Общие стили для контейнера */
 

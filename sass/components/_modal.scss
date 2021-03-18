@@ -1,12 +1,11 @@
 .modal {
-  @include position-center();
   @include transition(opacity);
   @include box-shadow();
 
   text-align: center;
 
   padding: 40px;
-  width: 100vw;
+  width: 100%;
   max-height: 100vh;
 
   background-color: $main-background-color;
@@ -56,6 +55,7 @@
   }
 
   @media screen and (min-width: $mobile) {
+    @include position-center();
     width: 450px;    
   }
 
@@ -138,23 +138,19 @@
   overflow: hidden;
 
   &:checked + .modal__checked-icon {
-    opacity: 100%;
-  }
-
-  &:checked ~ .modal__checkbox-icon {
-    opacity: 0%;
+    background-color: $accent-color;
+    border: none;
   }
 }
 
 .modal__checked-icon {
-  position: absolute;
-  top: 4px;
-  left: 12px;
+  min-width: 16px;
+  min-height: 15px;
 
-  background-color: $accent-color;
-  opacity: 0%;
+  border: 2px solid #000;
+  border-radius: 4px;
 
-  @include transition(opacity);
+  @include transition(background-color);
 }
 
 .modal__checkbox-icon {
