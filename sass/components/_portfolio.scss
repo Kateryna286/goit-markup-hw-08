@@ -4,28 +4,24 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  &__container {
-    margin-bottom: 40px - 15px;
-  }
-
-  @media screen and (min-width: $mobile) {
-    &__container {
-      width: $mobile;
-    }
-  }
-
-  @media screen and (min-width: $tablet) {
-    &__container {
-      width: $tablet;
-      margin-bottom: 30px;
-    }
-  }
-
   @media screen and (min-width: $desktop) {
     padding-top: 94px;
     padding-bottom: 94px;
+  }
 
-    &__container {
+  &__container {
+    margin-bottom: 40px - 15px;
+
+    @media screen and (min-width: $mobile) {
+      width: $mobile;
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: $tablet;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
       width: 1200px;
       margin-bottom: 50px;
     }
@@ -37,26 +33,21 @@
   flex-wrap: wrap;
   justify-content: start;
 
-  &__item {
-    margin-right: 8px;
-  }
-
-  @media screen and (max-width: $tablet - 1px) {
-    
-    &__item {
-      margin-bottom: 15px;
-    }
-  }
   @media screen and (min-width: $tablet) {
     justify-content: center;
   }
 
-  @media screen and (min-width: $desktop) {
-    display: flex;
-    justify-content: center;
+  &__item {
+    margin-right: 8px;
 
-    &__item:not(:last-child) {
-      margin-right: 8px;
+    @media screen and (max-width: $tablet - 1px) {
+      margin-bottom: 15px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
     }
   }
 }
@@ -91,50 +82,50 @@
 /* Портфолио. Работы */
 
 .card-set {
-  &__item {
-    
-    // width: 450px;
-    width: 100%;
-
-    margin-left: auto;
-    margin-top: auto;
-
-    background-color: $main-background-color;
-  }
-
-  &__thumb {
-    display: flex;
-  flex-direction: column;
-    position: relative;
-    overflow: hidden;
-  }
-
-  @media screen and (max-width: $tablet - 1px) {
-    &__item {
-      margin-bottom: 30px;
-    }
-  }
-
   @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
 
     margin-left: -30px;
     margin-top: -30px;
+  }
 
-    &__item {
+  &__item {
+    width: 100%;
+
+    margin-left: auto;
+    margin-top: auto;
+
+    background-color: $main-background-color;
+
+    @media screen and (max-width: $tablet - 1px) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $tablet) {
       flex-basis: calc(100% / 2 - 30px);
       
-
       margin-left: 30px;
       margin-top: 30px;
     }
+
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc(100% / 3 - 30px);          
+    }
   }
 
-  @media screen and (min-width: $desktop) {
-    &__item {
-      flex-basis: calc(100% / 3 - 30px);          
-    }  
+  &__thumb {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    height: 294px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 

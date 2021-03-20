@@ -6,22 +6,118 @@
 
   text-align: center;
 
+  @media screen and (min-width: $mobile) {
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    max-width: 786px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 1600px;
+  }
+
   &__overlay {
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    // background-size: cover;
 
     padding-top: 118px;
 
-    max-width: 100%;
+    max-width: 480px;
     min-height: 400px;
 
-    // background-image: linear-gradient(
-    //     to right,
-    //     rgba(47, 48, 58, 0.4),
-    //     rgba(47, 48, 58, 0.4)
-    //   ),
-    //   url('../images/img-hero.jpg');
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+      url('../../images/hero/hero_480.jpg');
+    background-size: 480px 400px;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url('../../images/hero/hero_480@2x.jpg');
+    }
+
+    @media screen and (min-width: $mobile) {
+      max-width: 480px;
+      min-height: 400px;
+
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../../images/hero/hero_480.jpg');
+      background-size: 480px 400px;
+    
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url('../../images/hero/hero_480@2x.jpg');
+    }
+  }
+
+    @media screen and (min-width: $tablet) {
+      max-width: 786px;
+      min-height: 400px;
+
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../../images/hero/hero_768.jpg');
+      background-size: 768px 400px;  
+    
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url('../../images/hero/hero_768@2x.jpg');
+    }
+  }
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 200px;
+
+      max-width: 1600px;
+      min-height: 600px;
+
+      background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+        url('../../images/hero/hero_1200.jpg');
+      background-size: 1600px 600px;  
+    
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url('../../images/hero/hero_1200@2x.jpg');
+    }
+  }
   }
 
   &__title {
@@ -37,75 +133,16 @@
     letter-spacing: 0.06em;
 
     text-transform: uppercase;
-  }
 
-  @media screen and (min-width: $mobile){
-  
-    max-width: 480px;
-    height: 400px;
-
-    &__overlay {
-      max-width: 480px;
-      min-height: 400px;
-
-      // background-image: linear-gradient(
-      //     to right,
-      //     rgba(47, 48, 58, 0.4),
-      //     rgba(47, 48, 58, 0.4)
-      //   ),
-      //   url('../images/img-hero.jpg');
-    }
-
-    &__title {
+    @media screen and (min-width: $mobile) {
       width: 360px;
     }
-  }
 
-  @media screen and (min-width: $tablet){
-    max-width: 768px;
-    height: 400px;
-
-    &__overlay {
-      max-width: 786px;
-      min-height: 400px;
-
-      // background-image: linear-gradient(
-      //     to right,
-      //     rgba(47, 48, 58, 0.4),
-      //     rgba(47, 48, 58, 0.4)
-      //   ),
-      //   url('../images/img-hero.jpg');
-    }
-  }
-
-  @media screen and (min-width: $desktop){
-    max-width: 1600px;
-    height: 600px;
-
-    &__overlay {
-      padding-top: 200px;
-
-      max-width: 1600px;
-      min-height: 600px;
-
-      background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-        url('../images/img-hero.jpg');
-    }
-
-    &__title {
-    
+    @media screen and (min-width: $desktop) {
       width: 696px;
-
-      color: $white-additional-color;
-
     
       font-size: 44px;
       line-height: 1.36;
-    
     }
   }
 }

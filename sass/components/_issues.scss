@@ -39,8 +39,6 @@
 
       color: $white-additional-color;
 
-      // @extend %block-titles;
-
       @include block-titles();
     }
   }
